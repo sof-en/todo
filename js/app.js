@@ -59,27 +59,15 @@ function createToDo() {
 }
 
 function deleteToDo(id) {
-  Swal.fire({
-    title: "Are you sure",
-    text: "You won't be able to revert this!",
-    icon: "warning",
-    showCancelButton: true,
-    confirButtonColo: "#3085d6",
-    cancelButtonColor: "#d33",
-    confirmButtonText: "Yes, delete if!",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      todoObjData = todoObjData.filter((el) => el.id !== id);
-      document.querySelector(`#todo-${id}`).classList.add("animate");
+  todoObjData = todoObjData.filter((el) => el.id !== id);
+  document.querySelector(`#todo-${id}`).classList.add("animate");
 
-      setTimeout(() => {
-        generateToDo(todoObjData);
-      }, 400);
-      // Swal.fire({
-      //   title: " User successful delete!",
-      //   icon: "success",
-      // });
-    }
+  setTimeout(() => {
+    generateToDo(todoObjData);
+  }, 400);
+  Swal.fire({
+    title: " User successful delete!",
+    icon: "success",
   });
 }
 
