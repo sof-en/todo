@@ -10,9 +10,9 @@
 }
 body {
   background: linear-gradient(
-    to bottom right,
-    #6889FF,
-    #C668FF
+    to bottom,
+    #ff9268,
+    #ff62de
   );
   width: 100%;
   height: 100vh;
