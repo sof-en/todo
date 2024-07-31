@@ -52,10 +52,6 @@ function createToDo() {
   todoObjData = [obj, ...todoObjData];
   reset();
   generateToDo(todoObjData);
-  Swal.fire({
-    title: "Todo successfuly created!",
-    icon: "Successe",
-  });
 }
 
 function deleteToDo(id) {
@@ -65,10 +61,7 @@ function deleteToDo(id) {
   setTimeout(() => {
     generateToDo(todoObjData);
   }, 400);
-  Swal.fire({
-    title: " User successful delete!",
-    icon: "success",
-  });
+ 
 }
 
 function selectFunction(id) {
@@ -90,10 +83,7 @@ function updateSelectToDo() {
   });
   reset();
   generateToDo(todoObjData);
-  Swal.fire({
-    title: "Todo successfuly added!",
-    icon: "Successe",
-  });
+  
 }
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
