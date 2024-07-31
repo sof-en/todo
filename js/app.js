@@ -53,7 +53,7 @@ function createToDo() {
   reset();
   generateToDo(todoObjData);
   Swal.fire({
-    title: "User successfuly added!",
+    title: "Todo successfuly created!",
     icon: "Successe",
   });
 }
@@ -103,7 +103,7 @@ function updateSelectToDo() {
   reset();
   generateToDo(todoObjData);
   Swal.fire({
-    title: "User successfuly added!",
+    title: "Todo successfuly added!",
     icon: "Successe",
   });
 }
