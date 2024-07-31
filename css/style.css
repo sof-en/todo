@@ -1,0 +1,182 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  outline: none;
+}
+:root {
+  --green: mediumseagreen;
+  --pink-red: mediumvioletred;
+}
+body {
+  background: linear-gradient(
+    to bottom left,
+    rgba(241, 74, 224, 0.4),
+    rgb(255, 255, 255),
+    rgba(255, 255, 255, 0.485),
+    rgb(240, 236, 239)
+  );
+  width: 100%;
+  height: 100vh;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: unset;
+}
+button,
+input {
+  outline: none;
+}
+button {
+  cursor: pointer;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+/*TODO: section form*/
+.form-section {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-section form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.form-section form input,
+button {
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+}
+/* .form-section form .btn{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+} */
+.form-section form input {
+  background: rgba(221, 220, 220, 0.3);
+}
+.form-section form button#send {
+  background-color: var(--green);
+}
+.form-section form button#reset {
+  background-color: var(--pink-red);
+}
+
+/*TODO: todo-section*/
+
+.todo-section {
+  width: 40%;
+  margin: 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+.todo-section .todo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 6px;
+  border-radius: 16px;
+  background: rgba(235, 232, 232, 0.4);
+}
+.todo-section .todo-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* width: 100%; */
+  gap: 5px;
+}
+.todo-section .todo-inputs button#update {
+  background: var(--green);
+}
+.todo-section .todo-inputs button#delete {
+  background: var(--pink-red);
+}
+.checked {
+  text-decoration: line-through;
+}
+.animate {
+  animation-name: delete;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+}
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: rgb(83, 83, 83);
+}
+.not-found-none {
+  display: none;
+}
+
+@keyframes delete {
+  0% {
+    opacity: 1;
+    margin-left: -20%;
+  }
+  20% {
+    opacity: 0.8;
+    margin-left: -40%;
+  }
+  40% {
+    opacity: 0.6;
+    margin-left: -60%;
+  }
+  60% {
+    opacity: 0.4;
+    margin-left: -70%;
+  }
+  80% {
+    opacity: 0.2;
+    margin-left: -90%;
+  }
+  100% {
+    opacity: 0;
+    margin-left: -150%;
+  }
+}
+
+@media (800px <=width <=1010px) {
+  .todo-section {
+    width: 60%;
+  }
+}
+@media (500px <=width <=800px) {
+  .todo-section {
+    width: 80%;
+  }
+}
+@media (0px <=width <=500px) {
+  .todo-section {
+    width: 100%;
+  }
+  .form-section form input,
+  button {
+    width: 100%;
+  }
+}
